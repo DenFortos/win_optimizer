@@ -1,0 +1,4 @@
+# Артефакты сборки
+release/
+win_optimizer.ps1
+*.zip

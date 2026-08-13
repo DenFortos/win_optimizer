@@ -1,0 +1,49 @@
+﻿<Grid Background="{DynamicResource PanelBG}">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    
+    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5,5,5,10">
+        <!-- Применение выбранных оптимизаций -->
+        <Button Name="BtnApplyOptimization" Content="" 
+            Style="{StaticResource TabButton}"
+            Background="Transparent"
+            BorderBrush="#16A34A"
+            BorderThickness="2"
+            Foreground="{DynamicResource TextFG}"/>
+        
+        <!-- Запуск очистки диска (cleanmgr) -->
+        <Button Name="BtnOpenCleanMgr" Content="" 
+            Style="{StaticResource TabButton}"
+            Background="Transparent"
+            BorderBrush="{DynamicResource ButtonBG}"
+            BorderThickness="2"
+            Foreground="{DynamicResource TextFG}"
+            Margin="15,0,0,0"/>
+        
+        <!-- Сброс выбора со счётчиком -->
+        <Button Name="BtnClearOptimization" Content="" 
+            Style="{StaticResource TabButton}"
+            Background="Transparent"
+            BorderBrush="#64748B"
+            BorderThickness="1"
+            Foreground="{DynamicResource TextFG}"
+            Margin="15,0,0,0"/>
+    </StackPanel>
+    
+    <TextBlock Name="TabDescriptionOptimization" Grid.Row="1"
+             Text="" FontSize="12" Opacity="0.7"
+             Margin="5,0,5,15"
+             Foreground="{DynamicResource TextFG}"
+             TextWrapping="Wrap"/>
+    
+    <ScrollViewer Grid.Row="2" 
+                  Style="{StaticResource TabScrollViewer}"
+                  VerticalScrollBarVisibility="Auto" 
+                  HorizontalScrollBarVisibility="Disabled" 
+                  Padding="5,0">
+        <StackPanel Name="OptimizationCategoriesPanel"/>
+    </ScrollViewer>
+</Grid>

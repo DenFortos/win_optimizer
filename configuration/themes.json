@@ -1,0 +1,36 @@
+﻿{
+  "light": {
+    "MainBG": "#F5F5F5",
+    "PanelBG": "#FFFFFF",
+    "TextFG": "#333333",
+    "ButtonBG": "#0078D4",
+    "ButtonFG": "#FFFFFF",
+    "BorderBrush": "#CCCCCC",
+    "HeaderBG": "#0078D4",
+    "HeaderFG": "#FFFFFF",
+    "TabBG": "#E0E0E0",
+    "TabFG": "#333333",
+    "TabSelectedBG": "#0078D4",
+    "TabSelectedFG": "#FFFFFF",
+    "ComboBoxBG": "#FFFFFF",
+    "ComboBoxFG": "#333333",
+    "ComboBoxBorder": "#CCCCCC"
+  },
+  "dark": {
+    "MainBG": "#1E1E1E",
+    "PanelBG": "#252526",
+    "TextFG": "#FFFFFF",
+    "ButtonBG": "#0E639C",
+    "ButtonFG": "#FFFFFF",
+    "BorderBrush": "#3E3E42",
+    "HeaderBG": "#0A4A7A",
+    "HeaderFG": "#FFFFFF",
+    "TabBG": "#2D2D30",
+    "TabFG": "#CCCCCC",
+    "TabSelectedBG": "#0E639C",
+    "TabSelectedFG": "#FFFFFF",
+    "ComboBoxBG": "#3E3E42",
+    "ComboBoxFG": "#FFFFFF",
+    "ComboBoxBorder": "#555555"
+  }
+}

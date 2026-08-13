@@ -1,0 +1,31 @@
+﻿<Border Grid.Row="0" Background="{DynamicResource HeaderBG}" Padding="20,15">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Логотип и название -->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock Text="⚡" FontSize="28" Foreground="{DynamicResource HeaderFG}" 
+                      Margin="0,0,10,0" VerticalAlignment="Center"/>
+            <TextBlock Text="Windows Optimizer" FontSize="24" FontWeight="Bold" 
+                      Foreground="{DynamicResource HeaderFG}" 
+                      VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        <!-- Выбор языка и переключение темы -->
+        <StackPanel Grid.Column="1" Orientation="Horizontal" 
+                   VerticalAlignment="Center">
+            <ComboBox Name="LanguageComboBox" Margin="0,0,10,0" Width="80" Height="35" SelectedIndex="0">
+                <ComboBoxItem Content="RU" Tag="ru"/>
+                <ComboBoxItem Content="EN" Tag="en"/>
+            </ComboBox>
+            <Button Name="ThemeButton" 
+                Style="{StaticResource IconButton}"
+                Content="☾"
+                Width="40" Height="40"
+                ToolTip="Toggle Theme"/>
+        </StackPanel>
+    </Grid>
+</Border>

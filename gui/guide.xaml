@@ -1,0 +1,21 @@
+<Grid Background="{DynamicResource PanelBG}">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    
+    <TextBlock Name="TabDescriptionGuide" Grid.Row="0"
+             Text="Подробное руководство по всем функциям программы" 
+             FontSize="13" Opacity="0.7"
+             Margin="10,10,10,15"
+             Foreground="{DynamicResource TextFG}"
+             TextWrapping="Wrap"/>
+    
+    <ScrollViewer Grid.Row="1" 
+                  Style="{StaticResource TabScrollViewer}"
+                  VerticalScrollBarVisibility="Auto" 
+                  HorizontalScrollBarVisibility="Disabled" 
+                  Padding="10,0">
+        <StackPanel Name="GuideCategoriesPanel"/>
+    </ScrollViewer>
+</Grid>
