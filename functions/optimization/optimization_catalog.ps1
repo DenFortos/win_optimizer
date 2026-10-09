@@ -2,6 +2,25 @@
 # Каталог системных оптимизаций
 
 $script:OptimizationCatalog = [ordered]@{
+    "StartAndExplorer" = @{
+        DisplayName = "Start & Explorer"; TranslationKey = "optimization_start_explorer"; Icon = "🚀"
+        Description = "Очистка Пуска и базовая настройка Проводника"; Order = 0
+        Items = @(
+            @{ Name = "Hide Desktop Recycle Bin"; TranslationKey = "startexp_hide_recyclebin"; FunctionName = "Hide-DesktopRecycleBin"; Safe = $true; Description = "Убирает корзину с рабочего стола" }
+            @{ Name = "Hide Desktop Spotlight Icon"; TranslationKey = "startexp_hide_spotlight"; FunctionName = "Hide-DesktopSpotlight"; Safe = $true; Description = "Убирает значок 'Узнать больше об этом изображении'" }
+            @{ Name = "Open Explorer to 'This PC'"; TranslationKey = "startexp_explorer_thispc"; FunctionName = "Set-ExplorerOpenToThisPC"; Safe = $true; Description = "Проводник открывается сразу на 'Этот компьютер'" }
+            @{ Name = "Show Hidden Files"; TranslationKey = "startexp_show_hidden"; FunctionName = "Show-HiddenFiles"; Safe = $true; Description = "Показывает скрытые файлы и папки" }
+            @{ Name = "Show File Extensions"; TranslationKey = "startexp_show_extensions"; FunctionName = "Show-FileExtensions"; Safe = $true; Description = "Показывает расширения всех файлов" }
+            @{ Name = "Hide 'All Apps' in Start"; TranslationKey = "startexp_hide_allapps"; FunctionName = "Hide-StartMenuAllApps"; Safe = $true; Description = "Убирает категории и список 'Все приложения' из Пуска" }
+            @{ Name = "Hide 'Recommended' in Start"; TranslationKey = "startexp_hide_recommended"; FunctionName = "Hide-StartMenuRecommendations"; Safe = $true; Description = "Убирает раздел 'Рекомендуем' из Пуска" }
+            @{ Name = "Hide Home"; TranslationKey = "explorer_hide_home"; FunctionName = "Hide-Home"; Safe = $true; Description = "Скрывает 'Главная' из боковой панели" }
+            @{ Name = "Hide Gallery"; TranslationKey = "explorer_hide_gallery"; FunctionName = "Hide-Gallery"; Safe = $true; Description = "Скрывает 'Галерея' из боковой панели" }
+            @{ Name = "Hide OneDrive"; TranslationKey = "explorer_hide_onedrive"; FunctionName = "Hide-OneDrive"; Safe = $true; Description = "Скрывает OneDrive из боковой панели" }
+            @{ Name = "Hide Network"; TranslationKey = "explorer_hide_network"; FunctionName = "Hide-Network"; Safe = $true; Description = "Скрывает 'Сеть' из боковой панели" }
+            @{ Name = "Hide Removable Drives"; TranslationKey = "explorer_hide_removable"; FunctionName = "Hide-RemovableDrives"; Safe = $true; Description = "Скрывает съёмные диски (убирает дублирование флешек)" }
+        )
+    }
+    
     "GamingPerformance" = @{
         DisplayName = "Gaming Performance"; TranslationKey = "optimization_gaming"; Icon = "🎮"
         Description = "Оптимизация для игр и снижения инпут-лага"; Order = 1
@@ -27,21 +46,9 @@ $script:OptimizationCatalog = [ordered]@{
         )
     }
     
-    "FileExplorer" = @{
-        DisplayName = "File Explorer"; TranslationKey = "optimization_explorer"; Icon = "📁"
-        Description = "Скрытие лишних элементов из боковой панели проводника"; Order = 3
-        Items = @(
-            @{ Name = "Hide Home"; TranslationKey = "explorer_hide_home"; FunctionName = "Hide-Home"; Safe = $true; Description = "Скрывает 'Главная' из боковой панели" }
-            @{ Name = "Hide Gallery"; TranslationKey = "explorer_hide_gallery"; FunctionName = "Hide-Gallery"; Safe = $true; Description = "Скрывает 'Галерея' из боковой панели" }
-            @{ Name = "Hide OneDrive"; TranslationKey = "explorer_hide_onedrive"; FunctionName = "Hide-OneDrive"; Safe = $true; Description = "Скрывает OneDrive из боковой панели" }
-            @{ Name = "Hide Network"; TranslationKey = "explorer_hide_network"; FunctionName = "Hide-Network"; Safe = $true; Description = "Скрывает 'Сеть' из боковой панели" }
-            @{ Name = "Hide Removable Drives"; TranslationKey = "explorer_hide_removable"; FunctionName = "Hide-RemovableDrives"; Safe = $true; Description = "Скрывает съёмные диски (убирает дублирование флешек)" }
-        )
-    }
-    
     "Cleanup" = @{
         DisplayName = "System Cleanup"; TranslationKey = "optimization_cleanup"; Icon = "🗑️"
-        Description = "Очистка системного мусора и освобождение места на диске"; Order = 4
+        Description = "Очистка системного мусора и освобождение места на диске"; Order = 3
         Items = @(
             @{ Name = "Clean WinSxS (DISM)"; TranslationKey = "cleanup_dism_winsxs"; FunctionName = "Invoke-DismCleanup"; Safe = $true; Description = "Глубокая очистка старых компонентов Windows (освобождает 2-5 ГБ)" }
         )

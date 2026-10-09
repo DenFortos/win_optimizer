@@ -18,6 +18,9 @@ function Apply-Optimizations {
         "Disable-Telemetry", "Disable-AdvertisingID",
         "Disable-WebSearchStartMenu",
         "Invoke-DismCleanup",
+        "Hide-DesktopRecycleBin", "Hide-DesktopSpotlight",
+        "Set-ExplorerOpenToThisPC", "Show-HiddenFiles", "Show-FileExtensions",
+        "Hide-StartMenuAllApps", "Hide-StartMenuRecommendations",
         "Hide-Home", "Hide-Gallery", "Hide-OneDrive", "Hide-Network", "Hide-RemovableDrives",
         "Restart-Explorer")) {
         $cmd = Get-Command -Name $funcName -CommandType Function -ErrorAction SilentlyContinue
@@ -70,8 +73,13 @@ foreach (`$funcName in `$selectedFunctions) {
     }
 }
 
-# Перезапуск проводника, если применялись твики проводника
-`$explorerTweaks = @("Hide-Home", "Hide-Gallery", "Hide-OneDrive", "Hide-Network", "Hide-RemovableDrives")
+# Перезапуск проводника, если применялись твики проводника или Пуска
+`$explorerTweaks = @(
+    "Hide-DesktopRecycleBin", "Hide-DesktopSpotlight",
+    "Set-ExplorerOpenToThisPC", "Show-HiddenFiles", "Show-FileExtensions",
+    "Hide-StartMenuAllApps", "Hide-StartMenuRecommendations",
+    "Hide-Home", "Hide-Gallery", "Hide-OneDrive", "Hide-Network", "Hide-RemovableDrives"
+)
 `$appliedExplorerTweaks = `$selectedFunctions | Where-Object { `$explorerTweaks -contains `$_ }
 if (`$appliedExplorerTweaks.Count -gt 0) {
     Restart-Explorer

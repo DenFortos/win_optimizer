@@ -93,10 +93,28 @@ Initialize-TabHandlers -Window $Window
 
 $script:IsInitializing = $false
 
-# Тема
-$themeName = if ($DarkTheme) { "dark" } else { "light" }
+# Тема: по умолчанию берётся из settings.json, ключ -DarkTheme принудительно включает тёмную
+$defaultTheme = "light"
+try {
+    $settingsJson = $null
+    if ($ProjectRoot) {
+        $settingsPath = Join-Path $ProjectRoot "configuration/settings.json"
+        if (Test-Path $settingsPath) {
+            $settingsJson = Get-Content $settingsPath -Raw -Encoding UTF8
+        }
+    }
+    if (-not $settingsJson -and $script:EmbeddedSettingsJson) {
+        $settingsJson = $script:EmbeddedSettingsJson
+    }
+    if ($settingsJson) {
+        $parsedTheme = ($settingsJson | ConvertFrom-Json).default_theme
+        if ($parsedTheme -eq "dark" -or $parsedTheme -eq "light") { $defaultTheme = $parsedTheme }
+    }
+} catch {}
+
+$script:IsDarkTheme = if ($DarkTheme) { $true } else { $defaultTheme -eq "dark" }
+$themeName = if ($script:IsDarkTheme) { "dark" } else { "light" }
 Set-Theme -ThemeName $themeName -Window $Window
-$script:IsDarkTheme = [bool]$DarkTheme
 Update-ThemeButton -Window $Window
 
 # Очистка временного файла после закрытия окна (если запускались из RAM)

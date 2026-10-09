@@ -18,8 +18,8 @@ $script:GuideContent = [ordered]@{
             @{
                 Heading = @{ en = "Available programs"; ru = "Доступные программы" }
                 Body = @{
-                    en = "🌐 Browsers: Brave, Chrome, Firefox, Tor Browser ⚠️, Vivaldi`n💬 Communications: Discord ⚠️, Telegram, Signal ⚠️, Zoom, TeamSpeak`n💻 Development: VS Code, Git, Python3, NodeJS LTS, GitHub CLI, MinGW (GCC), Notepad++`n🎮 Games: Steam, Epic Games, GOG Galaxy`n🔧 Microsoft Tools: PowerToys, Windows Terminal, .NET Desktop Runtime 8`n🎵 Multimedia: VLC, OBS Studio, GIMP, Blender`n🛠️ Utilities: 7-Zip, WinRAR, Bitwarden, Rufus, Everything, ShareX, Wireshark, PuTTY, WinSCP, CPU-Z, HWiNFO, Revo Uninstaller, TreeSize Free"
-                    ru = "🌐 Браузеры: Brave, Chrome, Firefox, Tor Browser ⚠️, Vivaldi`n💬 Коммуникации: Discord ⚠️, Telegram, Signal ⚠️, Zoom, TeamSpeak`n💻 Разработка: VS Code, Git, Python3, NodeJS LTS, GitHub CLI, MinGW (GCC), Notepad++`n🎮 Игры: Steam, Epic Games, GOG Galaxy`n🔧 Инструменты Microsoft: PowerToys, Windows Terminal, .NET Desktop Runtime 8`n🎵 Мультимедиа: VLC, OBS Studio, GIMP, Blender`n🛠️ Утилиты: 7-Zip, WinRAR, Bitwarden, Rufus, Everything, ShareX, Wireshark, PuTTY, WinSCP, CPU-Z, HWiNFO, Revo Uninstaller, TreeSize Free"
+                    en = "🌐 Browsers: Brave, Chrome, Firefox, Tor Browser ⚠️, Vivaldi`n💬 Communications: Discord ⚠️, Telegram, Signal ⚠️, Zoom, TeamSpeak`n💻 Development: VS Code, Git, Python3, NodeJS LTS, GitHub CLI, MinGW (GCC), Notepad++`n🎮 Games: Steam, Epic Games, GOG Galaxy`n Microsoft Tools: PowerToys, Windows Terminal, .NET Desktop Runtime 8`n🎵 Multimedia: VLC, OBS Studio, GIMP, Blender`n🛠️ Utilities: 7-Zip, WinRAR, Bitwarden, Rufus, Everything, ShareX, Wireshark, PuTTY, WinSCP, CPU-Z, HWiNFO, Revo Uninstaller, TreeSize Free"
+                    ru = " Браузеры: Brave, Chrome, Firefox, Tor Browser ⚠️, Vivaldi`n💬 Коммуникации: Discord ⚠️, Telegram, Signal ⚠️, Zoom, TeamSpeak`n💻 Разработка: VS Code, Git, Python3, NodeJS LTS, GitHub CLI, MinGW (GCC), Notepad++`n🎮 Игры: Steam, Epic Games, GOG Galaxy`n🔧 Инструменты Microsoft: PowerToys, Windows Terminal, .NET Desktop Runtime 8`n🎵 Мультимедиа: VLC, OBS Studio, GIMP, Blender`n🛠️ Утилиты: 7-Zip, WinRAR, Bitwarden, Rufus, Everything, ShareX, Wireshark, PuTTY, WinSCP, CPU-Z, HWiNFO, Revo Uninstaller, TreeSize Free"
                 }
             }
             @{
@@ -52,17 +52,17 @@ $script:GuideContent = [ordered]@{
                 }
             }
             @{
-                Heading = @{ en = "🎵 Media & Streaming"; ru = "🎵 Медиа и стриминг" }
+                Heading = @{ en = "🎵 Media & Streaming"; ru = " Медиа и стриминг" }
                 Body = @{
                     en = "Clipchamp — Microsoft online video editor`nGroove Music — music player (obsolete)`nYandex Music — Russian streaming service"
                     ru = "Clipchamp — онлайн-видеоредактор Microsoft`nGroove Music — музыкальный плеер (устарел)`nYandex Music — российский стриминговый сервис"
                 }
             }
             @{
-                Heading = @{ en = "🎮 Xbox & Gaming"; ru = "🎮 Игры и Xbox" }
+                Heading = @{ en = "🎮 Xbox & Gaming"; ru = " Игры и Xbox" }
                 Body = @{
-                    en = "Xbox Game Bar — game overlay (⚠️ don't remove if you play via Xbox)`nXbox App — Xbox app (⚠️ needed for Microsoft Store games)`nEdge Game Assist — gaming assistant in Edge"
-                    ru = "Xbox Game Bar — игровой оверлей (⚠️ не удаляй, если играешь через Xbox)`nXbox App — приложение Xbox (⚠️ нужно для игр из Microsoft Store)`nEdge Game Assist — игровой помощник в Edge"
+                    en = "Xbox Game Bar — game overlay (⚠️ don't remove if you play via Xbox)`nXbox App — Xbox app (️ needed for Microsoft Store games)`nEdge Game Assist — gaming assistant in Edge"
+                    ru = "Xbox Game Bar — игровой оверлей (⚠️ не удаляй, если играешь через Xbox)`nXbox App — приложение Xbox (️ нужно для игр из Microsoft Store)`nEdge Game Assist — игровой помощник в Edge"
                 }
             }
             @{
@@ -76,7 +76,7 @@ $script:GuideContent = [ordered]@{
                 Heading = @{ en = "📦 Optional Apps"; ru = "📦 Опциональные приложения" }
                 Body = @{
                     en = "Sticky Notes — sticky notes`nSound Recorder — voice recorder`nClock — clock, alarm, timer`n⚠️ These apps may be useful — remove with caution"
-                    ru = "Sticky Notes — липкие заметки`nSound Recorder — диктофон`nClock — часы, будильник, таймер`n⚠️ Эти приложения могут быть полезны — удаляй с осторожностью"
+                    ru = "Sticky Notes — липкие заметки`nSound Recorder — диктофон`nClock — часы, будильник, таймер`n️ Эти приложения могут быть полезны — удаляй с осторожностью"
                 }
             }
         )
@@ -87,6 +87,62 @@ $script:GuideContent = [ordered]@{
         Icon = "⚙️"
         Order = 3
         Sections = @(
+            @{
+                Heading = @{ en = "🚀 Start & Explorer"; ru = "🚀 Пуск и Проводник" }
+                Body = @{
+                    en = "Basic cleanup of the desktop, Start menu and Explorer. All changes apply instantly (Explorer restarts automatically)."
+                    ru = "Базовая очистка рабочего стола, меню Пуск и Проводника. Все изменения применяются мгновенно (проводник перезапускается автоматически)."
+                }
+            }
+            @{
+                Heading = @{ en = "Hide Desktop Recycle Bin"; ru = "Скрыть корзину с рабочего стола" }
+                Body = @{
+                    en = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel\{645FF040-5081-101B-9F08-00AA002F954E} = 1`n🔧 Hides the Recycle Bin icon from the desktop`n✅ Cleaner desktop — access Recycle Bin via Explorer's navigation pane`n Reboot: not required"
+                    ru = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel\{645FF040-5081-101B-9F08-00AA002F954E} = 1`n🔧 Скрывает иконку корзины с рабочего стола`n✅ Чище рабочий стол — доступ к корзине через боковую панель проводника`n🔄 Перезагрузка: не требуется"
+                }
+            }
+            @{
+                Heading = @{ en = "Hide Desktop Spotlight Icon"; ru = "Скрыть значок 'Узнать больше'" }
+                Body = @{
+                    en = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel\{2cc5ca98-6485-489a-920e-b3e88a6ccce3} = 1`n🔧 Hides the 'Learn more about this picture' icon (Windows Spotlight)`n✅ Removes Microsoft's advertising icon from the desktop`n🔄 Reboot: not required"
+                    ru = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel\{2cc5ca98-6485-489a-920e-b3e88a6ccce3} = 1`n🔧 Скрывает значок «Узнать больше об этом изображении» (Windows Spotlight)`n✅ Убирает рекламную иконку Microsoft с рабочего стола`n🔄 Перезагрузка: не требуется"
+                }
+            }
+            @{
+                Heading = @{ en = "Open Explorer to 'This PC'"; ru = "Открывать Проводник на 'Этот компьютер'" }
+                Body = @{
+                    en = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\LaunchTo = 1`n Opens Explorer to 'This PC' instead of 'Home'`n✅ Faster access to disks and folders`n🔄 Reboot: not required"
+                    ru = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\LaunchTo = 1`n🔧 Проводник открывается на «Этот компьютер» вместо «Главная»`n✅ Быстрый доступ к дискам и папкам`n🔄 Перезагрузка: не требуется"
+                }
+            }
+            @{
+                Heading = @{ en = "Show Hidden Files"; ru = "Показывать скрытые файлы" }
+                Body = @{
+                    en = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Hidden = 1`n🔧 Shows hidden files and folders in Explorer`n✅ Full control over your files`n🔄 Reboot: not required"
+                    ru = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Hidden = 1`n🔧 Показывает скрытые файлы и папки в проводнике`n✅ Полный контроль над файлами`n🔄 Перезагрузка: не требуется"
+                }
+            }
+            @{
+                Heading = @{ en = "Show File Extensions"; ru = "Показывать расширения файлов" }
+                Body = @{
+                    en = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\HideFileExt = 0`n🔧 Shows file extensions (.exe, .txt, .jpg)`n✅ Protects against disguised malware (e.g. invoice.pdf.exe)`n🔄 Reboot: not required"
+                    ru = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\HideFileExt = 0`n🔧 Показывает расширения файлов (.exe, .txt, .jpg)`n✅ Защита от замаскированных вирусов (например invoice.pdf.exe)`n🔄 Перезагрузка: не требуется"
+                }
+            }
+            @{
+                Heading = @{ en = "Hide 'All Apps' in Start"; ru = "Скрыть 'Все приложения' в Пуске" }
+                Body = @{
+                    en = " HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoStartMenuMorePrograms = 1`n🔧 Hides the 'All Apps' list and categories from the Start menu`n✅ Start menu shows only pinned apps — maximum minimalism`n🔄 Reboot: may be required (Explorer restart usually suffices)"
+                    ru = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoStartMenuMorePrograms = 1`n Скрывает список «Все приложения» и категории из меню Пуск`n✅ В Пуске только закреплённые приложения — максимальный минимализм`n🔄 Перезагрузка: может потребоваться (обычно хватает перезапуска проводника)"
+                }
+            }
+            @{
+                Heading = @{ en = "Hide 'Recommended' in Start"; ru = "Скрыть 'Рекомендуем' в Пуске" }
+                Body = @{
+                    en = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Start_IrisRecommendations = 0`n📍 Start_ShowRecentApps = 0, Start_TrackDocs = 0`n🔧 Hides the 'Recommended' section from the Start menu`n✅ Cleaner Start menu`n⚠️ May not work on some Windows 11 builds — disable manually via Settings → Personalization → Start`n🔄 Reboot: not required"
+                    ru = "📍 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Start_IrisRecommendations = 0`n📍 Start_ShowRecentApps = 0, Start_TrackDocs = 0`n🔧 Скрывает раздел «Рекомендуем» из меню Пуск`n✅ Чище меню Пуск`n⚠️ На некоторых сборках Windows 11 может не сработать — отключи вручную через Параметры → Персонализация → Пуск`n🔄 Перезагрузка: не требуется"
+                }
+            }
             @{
                 Heading = @{ en = "🎮 Gaming Performance"; ru = "🎮 Игровая производительность" }
                 Body = @{
@@ -105,7 +161,7 @@ $script:GuideContent = [ordered]@{
                 Heading = @{ en = "Disable Fullscreen Optimizations"; ru = "Отключить оптимизацию полноэкранного режима" }
                 Body = @{
                     en = "📍 HKCU\System\GameConfigStore\GameDVR_FSEBehaviorMode = 2`n🔧 Disables Windows FSO (Fullscreen Optimizations)`n✅ Reduces input lag by 20-30ms`n⚠️ May cause issues in some games`n🔄 Reboot: not required"
-                    ru = "📍 HKCU\System\GameConfigStore\GameDVR_FSEBehaviorMode = 2`n🔧 Отключает FSO (Fullscreen Optimizations) Windows`n✅ Снижает инпут-лаг на 20-30ms`n⚠️ Может вызвать проблемы в некоторых играх`n🔄 Перезагрузка: не требуется"
+                    ru = "📍 HKCU\System\GameConfigStore\GameDVR_FSEBehaviorMode = 2`n🔧 Отключает FSO (Fullscreen Optimizations) Windows`n✅ Снижает инпут-лаг на 20-30ms`n️ Может вызвать проблемы в некоторых играх`n Перезагрузка: не требуется"
                 }
             }
             @{
@@ -118,21 +174,21 @@ $script:GuideContent = [ordered]@{
             @{
                 Heading = @{ en = "Disable Mouse Acceleration"; ru = "Отключить ускорение мыши" }
                 Body = @{
-                    en = "📍 HKCU\Control Panel\Mouse\MouseSpeed = 0`n🔧 Disables mouse acceleration (Raw Input)`n✅ 1:1 mouse movement without acceleration`n🔄 Reboot: not required"
-                    ru = "📍 HKCU\Control Panel\Mouse\MouseSpeed = 0`n🔧 Отключает ускорение мыши (Raw Input)`n✅ Движение мыши 1:1 без акселерации`n🔄 Перезагрузка: не требуется"
+                    en = " HKCU\Control Panel\Mouse\MouseSpeed = 0`n🔧 Disables mouse acceleration (Raw Input)`n✅ 1:1 mouse movement without acceleration`n🔄 Reboot: not required"
+                    ru = "📍 HKCU\Control Panel\Mouse\MouseSpeed = 0`n Отключает ускорение мыши (Raw Input)`n✅ Движение мыши 1:1 без акселерации`n🔄 Перезагрузка: не требуется"
                 }
             }
             @{
                 Heading = @{ en = "Enable Game Mode"; ru = "Включить игровой режим" }
                 Body = @{
-                    en = "📍 HKCU\SOFTWARE\Microsoft\GameBar\AllowAutoGameMode = 1`n🔧 Enables Windows Game Mode`n✅ Prioritizes games over background processes, +5-10% FPS`n🔄 Reboot: not required"
-                    ru = "📍 HKCU\SOFTWARE\Microsoft\GameBar\AllowAutoGameMode = 1`n🔧 Включает игровой режим Windows`n✅ Приоритизирует игры над фоновыми процессами, +5-10% FPS`n🔄 Перезагрузка: не требуется"
+                    en = " HKCU\SOFTWARE\Microsoft\GameBar\AllowAutoGameMode = 1`n🔧 Enables Windows Game Mode`n✅ Prioritizes games over background processes, +5-10% FPS`n Reboot: not required"
+                    ru = "📍 HKCU\SOFTWARE\Microsoft\GameBar\AllowAutoGameMode = 1`n Включает игровой режим Windows`n✅ Приоритизирует игры над фоновыми процессами, +5-10% FPS`n🔄 Перезагрузка: не требуется"
                 }
             }
             @{
                 Heading = @{ en = "Enable HAGS"; ru = "Включить HAGS" }
                 Body = @{
-                    en = "📍 HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\HwSchMode = 2`n🔧 Enables Hardware-Accelerated GPU Scheduling`n✅ Reduces latency, +5-15% FPS`n🔄 Reboot: required"
+                    en = " HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\HwSchMode = 2`n🔧 Enables Hardware-Accelerated GPU Scheduling`n✅ Reduces latency, +5-15% FPS`n🔄 Reboot: required"
                     ru = "📍 HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\HwSchMode = 2`n🔧 Включает аппаратное планирование GPU (HAGS)`n✅ Снижает задержки, +5-15% FPS`n🔄 Перезагрузка: требуется"
                 }
             }
@@ -140,18 +196,18 @@ $script:GuideContent = [ordered]@{
                 Heading = @{ en = "High Performance Power Plan"; ru = "Схема высокой производительности" }
                 Body = @{
                     en = "📍 powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c`n🔧 Activates the 'High Performance' power plan`n✅ Stabilizes FPS, eliminates micro-stutters`n🔄 Reboot: not required"
-                    ru = "📍 powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c`n🔧 Активирует схему питания 'Высокая производительность'`n✅ Стабилизирует FPS, убирает микро-фризы`n🔄 Перезагрузка: не требуется"
+                    ru = "📍 powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c`n Активирует схему питания 'Высокая производительность'`n✅ Стабилизирует FPS, убирает микро-фризы`n🔄 Перезагрузка: не требуется"
                 }
             }
             @{
                 Heading = @{ en = "Disable Core Isolation"; ru = "Отключить изоляцию ядра" }
                 Body = @{
-                    en = "📍 HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\Enabled = 0`n🔧 Disables Core Isolation (Memory Integrity / HVCI)`n✅ +10-20% FPS in games`n⚠️ Reduces protection against rootkit attacks and kernel exploits`n🔄 Reboot: required"
+                    en = "📍 HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\Enabled = 0`n Disables Core Isolation (Memory Integrity / HVCI)`n✅ +10-20% FPS in games`n⚠️ Reduces protection against rootkit attacks and kernel exploits`n🔄 Reboot: required"
                     ru = "📍 HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity\Enabled = 0`n🔧 Отключает изоляцию ядра (Memory Integrity / HVCI)`n✅ +10-20% FPS в играх`n⚠️ Снижает защиту от rootkit-атак и эксплойтов ядра`n🔄 Перезагрузка: требуется"
                 }
             }
             @{
-                Heading = @{ en = "🔒 Privacy"; ru = "🔒 Конфиденциальность" }
+                Heading = @{ en = "🔒 Privacy"; ru = " Конфиденциальность" }
                 Body = @{
                     en = "Disabling Microsoft telemetry and tracking. All changes are safe and do not affect system operation."
                     ru = "Отключение телеметрии и слежки Microsoft. Все изменения безопасны и не влияют на работу системы."
@@ -160,7 +216,7 @@ $script:GuideContent = [ordered]@{
             @{
                 Heading = @{ en = "Disable Telemetry (DiagTrack)"; ru = "Отключить телеметрию (DiagTrack)" }
                 Body = @{
-                    en = "📍 Services: DiagTrack, dmwappushservice → Disabled`n📍 HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0`n🔧 Disables Microsoft diagnostic data collection`n✅ Reduces CPU load, more privacy`n🔄 Reboot: not required"
+                    en = " Services: DiagTrack, dmwappushservice → Disabled`n📍 HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0`n🔧 Disables Microsoft diagnostic data collection`n✅ Reduces CPU load, more privacy`n🔄 Reboot: not required"
                     ru = "📍 Службы: DiagTrack, dmwappushservice → Disabled`n📍 HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry = 0`n🔧 Отключает сбор диагностических данных Microsoft`n✅ Снижает нагрузку на CPU, больше приватности`n🔄 Перезагрузка: не требуется"
                 }
             }
@@ -168,7 +224,7 @@ $script:GuideContent = [ordered]@{
                 Heading = @{ en = "Disable Advertising ID"; ru = "Отключить рекламный ID" }
                 Body = @{
                     en = "📍 HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo\Enabled = 0`n🔧 Disables the Windows advertising identifier`n✅ Blocks personalized advertising`n🔄 Reboot: not required"
-                    ru = "📍 HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo\Enabled = 0`n🔧 Отключает рекламный идентификатор Windows`n✅ Запрещает персонализированную рекламу`n🔄 Перезагрузка: не требуется"
+                    ru = " HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo\Enabled = 0`n Отключает рекламный идентификатор Windows`n✅ Запрещает персонализированную рекламу`n🔄 Перезагрузка: не требуется"
                 }
             }
             @{
@@ -179,7 +235,7 @@ $script:GuideContent = [ordered]@{
                 }
             }
             @{
-                Heading = @{ en = "📁 File Explorer"; ru = "📁 Проводник" }
+                Heading = @{ en = " File Explorer"; ru = "📁 Проводник" }
                 Body = @{
                     en = "Hiding unnecessary items from the Explorer sidebar. All changes apply instantly (Explorer restarts automatically)."
                     ru = "Скрытие лишних элементов из боковой панели проводника. Все изменения применяются мгновенно (проводник перезапускается автоматически)."
@@ -195,7 +251,7 @@ $script:GuideContent = [ordered]@{
             @{
                 Heading = @{ en = "Hide Gallery"; ru = "Скрыть 'Галерея'" }
                 Body = @{
-                    en = "📍 HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\NonEnum\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c} = 1`n🔧 Hides 'Gallery' from the sidebar`n✅ Removes photo duplication`n🔄 Reboot: not required"
+                    en = "📍 HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\NonEnum\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c} = 1`n Hides 'Gallery' from the sidebar`n✅ Removes photo duplication`n🔄 Reboot: not required"
                     ru = "📍 HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\NonEnum\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c} = 1`n🔧 Скрывает 'Галерея' из боковой панели`n✅ Убирает дублирование фотографий`n🔄 Перезагрузка: не требуется"
                 }
             }
@@ -230,7 +286,7 @@ $script:GuideContent = [ordered]@{
             @{
                 Heading = @{ en = "Clean WinSxS (DISM)"; ru = "Очистка WinSxS (DISM)" }
                 Body = @{
-                    en = "📍 Dism /Online /Cleanup-Image /StartComponentCleanup`n🔧 Deep cleanup of the Windows component store (WinSxS)`n✅ Frees 2-5 GB by removing old component versions`n⏳ May take 5-15 minutes`n🔄 Reboot: not required"
+                    en = "📍 Dism /Online /Cleanup-Image /StartComponentCleanup`n Deep cleanup of the Windows component store (WinSxS)`n✅ Frees 2-5 GB by removing old component versions`n⏳ May take 5-15 minutes`n🔄 Reboot: not required"
                     ru = "📍 Dism /Online /Cleanup-Image /StartComponentCleanup`n🔧 Глубокая очистка хранилища компонентов Windows (WinSxS)`n✅ Освобождает 2-5 ГБ, удаляя старые версии компонентов`n⏳ Может занять 5-15 минут`n🔄 Перезагрузка: не требуется"
                 }
             }

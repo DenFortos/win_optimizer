@@ -188,6 +188,109 @@ function Invoke-DismCleanup {
     }
 }
 
+# Скрывает корзину с рабочего стола
+function Hide-DesktopRecycleBin {
+    $path = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel"
+    $clsid = "{645FF040-5081-101B-9F08-00AA002F954E}"
+    
+    if (Test-RegistryValue $path $clsid 1) {
+        Write-Host "    ⚪ Уже скрыто" -ForegroundColor Gray
+        return
+    }
+    
+    if (-not (Test-Path $path)) { New-Item -Path $path -Force | Out-Null }
+    New-ItemProperty -Path $path -Name $clsid -Value 1 -PropertyType DWORD -Force | Out-Null
+    Write-Host "    ✅ Корзина скрыта с рабочего стола" -ForegroundColor Green
+}
+
+# Скрывает значок "Узнать больше об этом изображении" (Windows Spotlight)
+function Hide-DesktopSpotlight {
+    $path = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel"
+    $clsid = "{2cc5ca98-6485-489a-920e-b3e88a6ccce3}"
+    
+    if (Test-RegistryValue $path $clsid 1) {
+        Write-Host "    ⚪ Уже скрыто" -ForegroundColor Gray
+        return
+    }
+    
+    if (-not (Test-Path $path)) { New-Item -Path $path -Force | Out-Null }
+    New-ItemProperty -Path $path -Name $clsid -Value 1 -PropertyType DWORD -Force | Out-Null
+    Write-Host "    ✅ Значок 'Узнать больше' скрыт" -ForegroundColor Green
+}
+
+# Настраивает Проводник открываться на "Этот компьютер"
+function Set-ExplorerOpenToThisPC {
+    $path = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+    
+    if (Test-RegistryValue $path "LaunchTo" 1) {
+        Write-Host "    ⚪ Уже настроено" -ForegroundColor Gray
+        return
+    }
+    
+    Set-ItemProperty -Path $path -Name "LaunchTo" -Value 1 -Force
+    Write-Host "    ✅ Проводник открывается на 'Этот компьютер'" -ForegroundColor Green
+}
+
+# Включает показ скрытых файлов
+function Show-HiddenFiles {
+    $path = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+    
+    if (Test-RegistryValue $path "Hidden" 1) {
+        Write-Host "    ⚪ Уже включено" -ForegroundColor Gray
+        return
+    }
+    
+    Set-ItemProperty -Path $path -Name "Hidden" -Value 1 -Force
+    Write-Host "    ✅ Скрытые файлы отображаются" -ForegroundColor Green
+}
+
+# Включает показ расширений файлов
+function Show-FileExtensions {
+    $path = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+    
+    if (Test-RegistryValue $path "HideFileExt" 0) {
+        Write-Host "    ⚪ Уже включено" -ForegroundColor Gray
+        return
+    }
+    
+    Set-ItemProperty -Path $path -Name "HideFileExt" -Value 0 -Force
+    Write-Host "    ✅ Расширения файлов отображаются" -ForegroundColor Green
+}
+
+# Убирает категории и список "Все приложения" из меню Пуск
+function Hide-StartMenuAllApps {
+    $path = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer"
+    
+    if (Test-RegistryValue $path "NoStartMenuMorePrograms" 1) {
+        Write-Host "    ⚪ Уже скрыто" -ForegroundColor Gray
+        return
+    }
+    
+    if (-not (Test-Path $path)) { New-Item -Path $path -Force | Out-Null }
+    New-ItemProperty -Path $path -Name "NoStartMenuMorePrograms" -Value 1 -PropertyType DWORD -Force | Out-Null
+    Write-Host "    ✅ Категории и 'Все приложения' скрыты" -ForegroundColor Green
+}
+
+# Убирает раздел "Рекомендуем" из меню Пуск
+function Hide-StartMenuRecommendations {
+    $path = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+    $allSet = $true
+    
+    if (-not (Test-RegistryValue $path "Start_IrisRecommendations" 0)) { $allSet = $false }
+    if (-not (Test-RegistryValue $path "Start_ShowRecentApps" 0)) { $allSet = $false }
+    if (-not (Test-RegistryValue $path "Start_TrackDocs" 0)) { $allSet = $false }
+    
+    if ($allSet) {
+        Write-Host "    ⚪ Уже скрыто" -ForegroundColor Gray
+        return
+    }
+    
+    Set-ItemProperty -Path $path -Name "Start_IrisRecommendations" -Value 0 -Type DWord -Force
+    Set-ItemProperty -Path $path -Name "Start_ShowRecentApps" -Value 0 -Type DWord -Force
+    Set-ItemProperty -Path $path -Name "Start_TrackDocs" -Value 0 -Type DWord -Force
+    Write-Host "    ✅ Раздел 'Рекомендуем' скрыт" -ForegroundColor Green
+}
+
 # Скрывает «Главная» из боковой панели проводника
 function Hide-Home {
     $path = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\NonEnum"

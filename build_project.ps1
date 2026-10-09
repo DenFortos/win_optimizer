@@ -127,7 +127,7 @@ Write-Host ('File size: ' + $fileSize + ' KB') -ForegroundColor Gray
 # ============================================================================
 $releaseDir   = Join-Path $PSScriptRoot "release"
 $packageDir   = Join-Path $releaseDir "win_optimizer"
-$zipName      = "win_optimizer_v$($config.project.version).zip"
+$zipName      = "win_optimizer.zip"
 $zipPath      = Join-Path $releaseDir $zipName
 
 # Очищаем предыдущую сборку
